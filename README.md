@@ -1,6 +1,8 @@
 # Top-100 Research Workflow Framework
 
-This is a **strategy-free, offline demonstration** of research workflow controls. It uses synthetic metadata and record counts. It does not download market data, produce signals, trade, report investment performance, or establish a historical research result. “Binance” describes the study origin; this project is not affiliated with or endorsed by Binance.
+This portfolio contains **offline research/operations demonstrations** and a **redacted original source file for code review**. Start with the runnable examples below, or inspect [scripts/auto_trade_smc_mtf.py](scripts/auto_trade_smc_mtf.py) and its [review notes](scripts/README.md).
+
+The workflow demonstrations are strategy-free and use synthetic metadata and record counts. They do not download market data, produce signals, trade, report investment performance, or establish a historical research result. The separate source-review file retains non-Fibonacci strategy and operational code at the owner's request, with private Fibonacci material removed and execution disabled. “Binance” describes the study origin; this project is not affiliated with or endorsed by Binance.
 
 Python 3.12 and its standard library are sufficient. From this directory:
 
@@ -24,7 +26,7 @@ flowchart LR
 
 The generic `PhaseAdapter` owns study-specific evidence and must explicitly accept each phase. The included adapter validates the toy spec, availability and bar sequence, then records counts. For a real study, the operator must independently establish source provenance, methodology, authorization and holdout custody; this demo cannot certify them. An interrupted invocation remains blocked for manual evidence recovery to avoid silently repeating a holdout call. No automatic recovery or rerun proves untouched history.
 
-This sanitized adaptation captures workflow ideas from an internal study, without its strategy, data, settings or results. The public implementation and prose were produced with AI-assisted development under human direction and review. The human owner defines the publication boundary and research governance; the demonstration is not presented as a hand-coded production engine. Source is available for evaluation; no license grant is supplied.
+The workflow adaptation captures ideas from an internal study without its strategy, data, settings or results. Development and documentation are AI-assisted under human direction and review. The separate redacted source preserves original code for inspection; it is not a runnable release. The human owner defines the publication boundary and research governance; the demonstration is not presented as a hand-coded production engine. Source is available for evaluation; no license grant is supplied.
 
 Read [methodology](docs/METHODOLOGY.md), [artifact contracts](docs/ARTIFACTS.md), and [publication boundary](docs/PROVENANCE.md) before extending the adapter. The example [configuration](examples/spec.json) is illustrative and contains no data source or trading settings.
 
