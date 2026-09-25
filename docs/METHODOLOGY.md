@@ -1,0 +1,9 @@
+# Temporal and PIT contracts
+
+Intervals are timezone-aware and half-open `[start, end)`. Each fold has a train interval, an explicit train cutoff, a purge gap and a later OOS interval. OOS folds must be ordered and nonoverlapping; the terminal holdout starts after every train and OOS end. The demonstration reserves the holdout before freezing the spec or invoking the synthetic adapter for training. Selection is represented by a protected `LOCK` artifact before OOS; subsequent phase callbacks receive its hash. A later use of any opened holdout must be labeled `RETROSPECTIVE_REPLAY`, not untouched holdout.
+
+PIT membership requires both `effective_from` and `available_at` for listing and rank snapshots. A known `effective_to` requires `end_available_at`; if the effective delisting is reached before the record is available, the checker fails closed. The latest historically available rank snapshot yields at most `top_n` ranked entries, capped at 100, and listing availability filters them. Revision values require availability, validity intervals and an unambiguous latest record. A historical provider's actual publication timestamps are **external evidence**, not something these checks can prove.
+
+The bar audit requires aligned sorted unique timestamps, positive finite prices, nonnegative finite volume, valid OHLC geometry, and explicit coverage. Missing slots must be declared; undeclared or falsely declared gaps fail. Complete-bucket aggregation refuses partial or misaligned buckets. These are input contracts, not a source authenticity check or venue parity claim.
+
+Phase order is `RESERVE_HOLDOUT → FREEZE_SPEC → SOURCE_AUDIT → ETL_AUDIT → TRAIN → LOCK → OOS → PIT → HOLDOUT → FINALIZE`. The demo executes no parameter search or financial calculation. A custom adapter can only be a workflow component; independent methodology review and an actual data custody procedure are needed for meaningful research.
