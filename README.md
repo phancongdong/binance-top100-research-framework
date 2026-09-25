@@ -27,3 +27,15 @@ The generic `PhaseAdapter` owns study-specific evidence and must explicitly acce
 This sanitized adaptation captures workflow ideas from an internal study, without its strategy, data, settings or results. The public implementation and prose were produced with AI-assisted development under human direction and review. The human owner defines the publication boundary and research governance; the demonstration is not presented as a hand-coded production engine. Source is available for evaluation; no license grant is supplied.
 
 Read [methodology](docs/METHODOLOGY.md), [artifact contracts](docs/ARTIFACTS.md), and [publication boundary](docs/PROVENANCE.md) before extending the adapter. The example [configuration](examples/spec.json) is illustrative and contains no data source or trading settings.
+
+## Goal and operations example
+
+The separate standard-library `operations_demo` package demonstrates a single active goal, evidence-bound completion and a bounded synthetic worker with restartable local checkpoints. It contains no service connection, external data or deployment action. Run it from this directory:
+
+```sh
+python -B -m operations_demo demo --output operations-output
+python -B -m operations_demo verify --output operations-output
+python -B -m operations_demo demo --output operations-output
+```
+
+The last command checks the completed output without rewriting files. See [goal states and handover](docs/GOALS.md), [operations checklist and incident example](docs/OPERATIONS.md), the [goal template](examples/goal-template.json), and [illustrative service unit](deploy/workflow-demo.service). These are offline portfolio examples only; the local checks do not prove deployment health or authorize any operational change.

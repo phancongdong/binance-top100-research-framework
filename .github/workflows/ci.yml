@@ -11,3 +11,6 @@ jobs:
       - run: python -B -m unittest discover -s tests -v
       - run: python -B -m research_framework demo --output run-example
       - run: python -B -m research_framework verify --output run-example
+      - run: python -B -m operations_demo demo --output operations-example
+      - run: python -B -m operations_demo verify --output operations-example
+      - run: python -B -m operations_demo demo --output operations-example

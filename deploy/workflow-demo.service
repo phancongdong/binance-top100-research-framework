@@ -1,0 +1,13 @@
+[Unit]
+Description=Offline synthetic workflow demonstration
+
+[Service]
+Type=oneshot
+User=workflow-demo
+WorkingDirectory=/srv/workflow-demo/project
+ExecStart=/usr/bin/python3 -B -m operations_demo demo --output /srv/workflow-demo/state
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

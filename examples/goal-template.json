@@ -1,0 +1,9 @@
+{
+  "goal_id": "sample-delivery",
+  "objective": "Prepare a local service handover",
+  "state": "PENDING",
+  "owner": "delivery-lead",
+  "blocker": null,
+  "next_action": "Review the synthetic status summary",
+  "evidence": []
+}

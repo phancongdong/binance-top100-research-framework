@@ -5,3 +5,5 @@ This repository publishes a newly written, sanitized workflow adaptation. It con
 The examples demonstrate structural controls: freeze and holdout order, historical availability checks, bar integrity, artifact binding and resume. Their labels cannot authorize a research phase or support a trading claim. A real study needs independently documented data origin, PIT authenticity, frozen selection, cost and accounting rules, custody of holdout material, and review under its own governance.
 
 Development is AI-assisted, with human scoping, workflow ownership and review. No license is provided. Do not add private material to example fixtures, CI logs or Git history.
+
+The operations example is a newly written conceptual adaptation of generic goal tracking, atomic checkpointing, bounded retries and local runbooks. Its status records and service unit are synthetic illustrations; neither documents an actual deployment nor establishes runtime health outside the local demonstration. No internal runner, configuration, service path or operational history is published. A human owns objectives, review, authorization and any environment-specific deployment decision.
