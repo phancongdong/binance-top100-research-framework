@@ -1,5 +1,8 @@
 # Top-100 Research Workflow Framework
 
+> 💬 **Cộng đồng**: Trao đổi AI, Quant, Bot trade tại: https://t.me/donkquantlab
+
+
 This portfolio contains **offline research/operations demonstrations** and a **redacted original source file for code review**. Start with the runnable examples below, or inspect [scripts/auto_trade_smc_mtf.py](scripts/auto_trade_smc_mtf.py) and its [review notes](scripts/README.md).
 
 The workflow demonstrations are strategy-free and use synthetic metadata and record counts. They do not download market data, produce signals, trade, report investment performance, or establish a historical research result. The separate source-review file retains non-Fibonacci strategy and operational code at the owner's request, with private Fibonacci material removed and execution disabled. “Binance” describes the study origin; this project is not affiliated with or endorsed by Binance.
